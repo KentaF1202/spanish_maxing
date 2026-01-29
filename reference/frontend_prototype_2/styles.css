@@ -1,0 +1,220 @@
+/* --- Global Variables & Reset --- */
+:root {
+    /* Primary: Bright Blue */
+    --primary-blue: #31B0FF;
+    
+    /* Background: Pure White */
+    --bg-white: #FFFFFF;
+    
+    /* Text: Pure Black */
+    --text-black: #000000;
+    
+    /* Auxiliary: Deep Saffron (Spanish/Academic feel) */
+    --aux-saffron: #F4C430;
+    
+    /* Subtle Gray for borders/inactive states */
+    --light-gray: #f0f0f0;
+    --border-gray: #dddddd;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-black);
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    color: var(--text-black); /* Keeping headers black for high contrast reading */
+}
+
+/* --- Landing Page Styles --- */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f9fcff 100%); /* Very subtle gradient */
+}
+
+.hero-section {
+    margin-bottom: 3rem;
+}
+
+.main-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    /* Optional: Add a small splash of the primary color to the text */
+    text-shadow: 2px 2px 0px var(--aux-saffron);
+}
+
+/* Main CTA Button */
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--bg-white);
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px; /* Rounded pill shape for a modern app feel */
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(49, 176, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #239ce6; /* Slightly darker blue */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(49, 176, 255, 0.4);
+}
+
+.mission-section {
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    color: var(--text-black);
+    font-size: 1.1rem;
+}
+
+/* Auth Card */
+.auth-section {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 400px;
+    /* Top border strip using the auxiliary color */
+    border-top: 6px solid var(--aux-saffron);
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--light-gray);
+    border-radius: 6px;
+    background-color: var(--bg-white);
+    color: var(--text-black);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+/* --- Home Page (Dashboard) Styles --- */
+.dashboard-layout {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 260px 1fr;
+    height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+    grid-column: 1 / -1;
+    background-color: var(--primary-blue);
+    color: var(--bg-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.header-brand {
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    color: var(--bg-white);
+}
+
+.header-controls button {
+    margin-left: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--bg-white);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.header-controls button:hover {
+    background-color: var(--aux-saffron);
+    color: var(--text-black); /* Black text on Yellow hover for readability */
+    border-color: var(--aux-saffron);
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    background-color: var(--bg-white);
+    border-right: 1px solid var(--border-gray);
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--text-black);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+/* Hover State */
+.nav-link:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+    padding-left: 2.2rem; /* Small movement effect */
+}
+
+/* Active State */
+.nav-link.active {
+    background-color: #eaf7ff; /* Very light tint of the primary blue */
+    color: var(--primary-blue);
+    font-weight: 700;
+    border-right: 4px solid var(--primary-blue); /* Marker on the right side */
+}
+
+/* Main Content Area */
+.main-content {
+    background-color: #fafafa; /* Slightly off-white to distinguish from sidebar */
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.widget-placeholder {
+    background-color: var(--bg-white);
+    /* Using auxiliary saffron for the dashed border to bring in that 'Spanish' feel */
+    border: 2px dashed var(--aux-saffron);
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-black);
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}

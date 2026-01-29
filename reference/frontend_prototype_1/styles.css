@@ -1,0 +1,215 @@
+/* --- Global Variables & Reset --- */
+:root {
+    /* Primary: Slate Blue */
+    --primary-slate: #457B9D;
+    
+    /* Background: Off-White/Cream */
+    --bg-cream: #F1FAEE;
+    
+    /* Accent: Brick Red (Important CTAs) */
+    --accent-red: #E63946;
+    
+    /* Text: Dark Navy */
+    --text-navy: #1D3557;
+    
+    /* Interactive: Light Blue Gray (Hovers/Cards) */
+    --interactive-blue: #A8DADC;
+
+    --white: #ffffff;
+    --light-border: #ccd6e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-navy);
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    color: var(--primary-slate);
+}
+
+/* --- Landing Page Styles --- */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-section {
+    margin-bottom: 3rem;
+}
+
+.main-title {
+    font-size: 4rem;
+    color: var(--primary-slate);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+/* Main CTA Button - Using Accent Color */
+.btn-primary {
+    background-color: var(--accent-red);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(29, 53, 87, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #d62839; /* Slightly darker red for hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(29, 53, 87, 0.25);
+}
+
+.mission-section {
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    color: var(--text-navy);
+    font-size: 1.1rem;
+}
+
+/* Auth Card */
+.auth-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    /* Using Dark Navy for shadow for harmony */
+    box-shadow: 0 4px 12px rgba(29, 53, 87, 0.1); 
+    width: 100%;
+    max-width: 400px;
+    /* Top border in Primary Slate */
+    border-top: 5px solid var(--primary-slate);
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--light-border);
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    color: var(--text-navy);
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: var(--primary-slate);
+    box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.2);
+}
+
+/* --- Home Page (Dashboard) Styles --- */
+.dashboard-layout {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 260px 1fr;
+    height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+    grid-column: 1 / -1;
+    background-color: var(--primary-slate);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.header-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.header-controls button {
+    margin-left: 1rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.header-controls button:hover {
+    /* Using Interactive Blue for hover states if applicable, or lighter slate */
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    background-color: var(--white);
+    border-right: 1px solid var(--light-border);
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--text-navy);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-weight: 500;
+    border-left: 5px solid transparent;
+}
+
+/* Hover State - Using Interactive Light Blue Gray */
+.nav-link:hover {
+    background-color: var(--interactive-blue);
+    color: var(--text-navy); 
+}
+
+/* Active State */
+.nav-link.active {
+    background-color: rgba(69, 123, 157, 0.1); /* Very light slate tint */
+    border-left: 5px solid var(--primary-slate);
+    color: var(--primary-slate);
+    font-weight: 700;
+}
+
+/* Main Content Area */
+.main-content {
+    background-color: var(--bg-cream);
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.widget-placeholder {
+    background-color: var(--white);
+    /* Using Interactive Blue for the dashed border */
+    border: 3px dashed var(--interactive-blue);
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-slate);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
