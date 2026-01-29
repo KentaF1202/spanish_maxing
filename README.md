@@ -1,6 +1,6 @@
 # Spanish Maxing
 
-The ultimate go-to website for the avid spanish learner.
+The go-to website for the avid spanish learner.
 
 Made without the use of AI-generated code or any frontend frameworks.
 

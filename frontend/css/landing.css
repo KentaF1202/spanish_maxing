@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu, Arial, sans-serif;
+    background-color: #fff;
+}
+
+#hero {
+    background-color: aqua;
+    height: 100vh;
+}
+
+#title {
+    color: #000;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: lighter;
+    padding: 40vh 0 0 0;
+    margin: 0;
+}
+
+#hero button {
+    margin-left: 48%;
+    margin-top: 5vh;
+}
+#mission {
+    background-color: greenyellow;
+    height: 100vh;
+}
+
+#mission p {
+    color: blueviolet;
+    font-size: 3rem;
+    margin: 0;
+}
+
+#mission img {
+    float: left;
+}
+
+#sign_in_up {
+    background-color: orange;
+    height: 100vh;
+}
+
+#sign_in_up p {
+    color: red;
+    margin: 0;
+}
+
+#hero, #mission, #sign_in_up {
+    background-color: white;
+}
