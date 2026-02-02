@@ -1,13 +1,24 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Ubuntu, Arial, sans-serif;
+    /* font-family: "Ubuntu Sans Mono", Helvetica, sans-serif; */
+    font-family: "Ubuntu Sans Mono", Courier, monospace;
     background-color: #fff;
 }
 
 #hero {
     background-color: aqua;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#logo_container {
+    background-color: pink;
+    display: inline-block;
 }
 
 #title {
@@ -15,13 +26,37 @@ body {
     text-align: center;
     font-size: 5rem;
     font-weight: lighter;
-    padding: 40vh 0 0 0;
+    border-right: .25rem solid black;
+    overflow: hidden;
+    width: 0;
     margin: 0;
+    white-space: nowrap;
+    animation: 
+    typing 2s steps(14, end) forwards,
+    blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect keyframes */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
 }
 
 #hero button {
-    margin-left: 48%;
-    margin-top: 5vh;
+    height: 5vh;
+    width: 15vw;
+    cursor: pointer;
+    border-radius: 30px;
+    border-color: white;
+    border-width: 0px;
+    color: white;
+    background-color: #31B0FF;
+    font-size: 1rem;
 }
 #mission {
     background-color: greenyellow;
@@ -48,6 +83,6 @@ body {
     margin: 0;
 }
 
-#hero, #mission, #sign_in_up {
+#hero, #mission, #sign_in_up, #logo_container {
     background-color: white;
 }
