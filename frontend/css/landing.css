@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* font-family: "Ubuntu Sans Mono", Helvetica, sans-serif; */
     font-family: "Ubuntu Sans Mono", Courier, monospace;
     background-color: #fff;
 }
@@ -57,7 +56,15 @@ body {
     color: white;
     background-color: #31B0FF;
     font-size: 1rem;
+    background-image: linear-gradient(to left, #1c25c5 50%, #31B0FF 50%);
+    background-size: 200%;
+    transition: 0.4s ease-out;
 }
+
+#hero button:hover {
+    background-position: right;
+}
+
 #mission {
     background-color: greenyellow;
     height: 100vh;
@@ -85,4 +92,4 @@ body {
 
 #hero, #mission, #sign_in_up, #logo_container {
     background-color: white;
-}
+} 
